@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<title>Rainbow Art Studios | Shreya's Portfolio</title>
+</head>
+
+<body>
+
+<canvas id="confettiCanvas"></canvas>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="art-class.html" class="active">Art Class</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <header>
+        <h1>Rainbow Art Studios</h1>
+        <p>Explore Creative Expression & Artistic Techniques</p>
+    </header>
+
+    <section>
+        <h2>Welcome to Rainbow Art Studios</h2>
+        <p>
+            Rainbow Art Studios is a vibrant creative space dedicated to fostering artistic growth and personal expression through various art forms and mediums. Whether you're a beginner or an experienced artist, our studios provide the perfect environment to explore your creative potential and develop your unique artistic voice.
+        </p>
+    </section>
+
+    <section>
+        <h2>Our Mission</h2>
+        <p>
+            At Rainbow Art Studios, we believe that art is a universal language that transcends boundaries and connects people from all walks of life. Our mission is to create an inclusive and supportive community where artists of all skill levels can come together to learn, create, and inspire one another. We are committed to providing high-quality instruction, state-of-the-art facilities, and a nurturing environment that encourages experimentation and self-discovery.
+        </p>
+    </section>
+
+    <section>
+        <h3>Studio Facilities</h3>
+        <p>
+            Our studios are equipped with everything you need to bring your creative visions to life. From traditional drawing and painting studios to digital design labs and sculpture workshops, we have dedicated spaces for every artistic discipline. Our facilities feature:
+        </p>
+        <ul>
+            <li>Professional-grade easels and canvas materials</li>
+            <li>Comprehensive selection of paints, brushes, and drawing supplies</li>
+            <li>Sculpture and pottery wheels with kiln facilities</li>
+            <li>Digital design stations with industry-standard software</li>
+            <li>Natural light studios with comfortable working spaces</li>
+            <li>Gallery space for showcasing student and professional work</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Courses Offered</h3>
+        <p>
+            Rainbow Art Studios offers a diverse range of courses designed to meet the needs and interests of artists at every level. Our experienced instructors bring real-world expertise and a passion for teaching to every class:
+        </p>
+        <ul>
+            <li><strong>Drawing Fundamentals:</strong> Master basic drawing techniques, perspective, anatomy, and shading</li>
+            <li><strong>Painting Essentials:</strong> Explore oil, acrylic, and watercolor painting methods</li>
+            <li><strong>Advanced Illustration:</strong> Develop your unique artistic style and illustration techniques</li>
+            <li><strong>Sculpture & 3D Art:</strong> Work with clay, stone, and mixed media</li>
+            <li><strong>Digital Art & Design:</strong> Create digital illustrations, graphics, and animations</li>
+            <li><strong>Art History & Theory:</strong> Understand artistic movements and develop critical thinking skills</li>
+            <li><strong>Portfolio Development:</strong> Prepare professional portfolios for higher education or career advancement</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Community & Events</h3>
+        <p>
+            Beyond the classroom, Rainbow Art Studios is a vibrant community hub where artists connect, collaborate, and celebrate each other's work. We regularly host:
+        </p>
+        <ul>
+            <li>Monthly gallery exhibitions showcasing student and professional artists</li>
+            <li>Artist talks and workshops with renowned creatives</li>
+            <li>Collaborative art projects and community murals</li>
+            <li>Art festivals and outdoor painting events</li>
+            <li>Networking sessions for artists and creative professionals</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Instructors & Expertise</h3>
+        <p>
+            Our team of dedicated instructors are accomplished artists with extensive professional experience and a genuine commitment to student success. Each instructor brings their unique perspective and expertise, providing personalized feedback and guidance to help students overcome challenges and achieve their artistic goals. Whether you're interested in traditional or contemporary art forms, our instructors are here to support your journey.
+        </p>
+    </section>
+
+    <section>
+        <h3>Enrollment & Getting Started</h3>
+        <p>
+            Ready to begin your artistic journey? Enrolling at Rainbow Art Studios is easy! We offer flexible class schedules to accommodate students of all backgrounds, including daytime, evening, and weekend options. New students are welcome to start at any time, and we offer trial classes so you can experience our studio and teaching style before committing. Contact us today to learn more about our current offerings and find the perfect class for you.
+        </p>
+    </section>
+
+</div>
+
+<button class="colorChanging" onclick="launchConfetti()">
+    Rainbow Art Studio
+</button>
+
+<script>
+const canvas = document.getElementById("confettiCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+const colors = ["#ff5fc8", "#ffd6f6", "#ffeaa7", "#c7ecee", "#a29bfe"];
+let pieces = [];
+
+function launchConfetti() {
+    pieces = [];
+    for (let i = 0; i < 220; i++) {
+        pieces.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * -canvas.height,
+            size: Math.random() * 6 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            speedX: Math.random() * 2 - 1,
+            speedY: Math.random() * 3 + 1,
+            rotation: Math.random() * 360,
+            rotationSpeed: Math.random() * 4 - 2,
+            opacity: Math.random() * 0.6 + 0.4
+        });
+    }
+    animate();
+}
+
+function drawConfetti(p) {
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rotation * Math.PI / 180);
+    ctx.globalAlpha = p.opacity;
+    ctx.fillStyle = p.color;
+    ctx.beginPath();
+    ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach((p, i) => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        p.rotation += p.rotationSpeed;
+        drawConfetti(p);
+        if (p.y > canvas.height + 20) pieces.splice(i, 1);
+    });
+    if (pieces.length > 0) requestAnimationFrame(animate);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<title>Projects | Shreya's Portfolio</title>
+</head>
+
+<body>
+
+<canvas id="confettiCanvas"></canvas>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="art-class.html">Art Class</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <header>
+        <h1>My Projects</h1>
+        <p>A Showcase of My Artistic Work & Creative Endeavors</p>
+    </header>
+
+    <section>
+        <h2>Project Gallery</h2>
+        <p style="margin-bottom: 30px; text-align: center;">
+            Browse through my portfolio of completed projects and creative works spanning various mediums and styles.
+        </p>
+
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="img/3d Sculpture Image 2025-12-27 at 8.34.15 PM (4) - Copy.jpeg" alt="3D Sculpture Project">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Abstract peacock Image 2025-12-27 at 8.34.15 PM (7) - Copy.jpeg" alt="Abstract Peacock">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Bird sketch Image 2025-12-27 at 8.34.15 PM (10) - Copy.jpeg" alt="Bird Sketch">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Ganpati Sketch Image 2025-12-27 at 8.34.15 PM (8) - Copy.jpeg" alt="Ganpati Sketch">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Parents sketch Image 2025-12-27 at 8.34.15 PM (6) - Copy.jpeg" alt="Parents Sketch">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Shivaji Image 2025-12-27 at 8.34.15 PM.jpeg" alt="Shivaji Portrait">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.37.16 PM (2).jpeg" alt="Project 7">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.37.16 PM (4).jpeg" alt="Project 8">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.37.16 PM (5).jpeg" alt="Project 9">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.37.17 PM (2).jpeg" alt="Project 10">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.37.17 PM (3).jpeg" alt="Project 11">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.37.17 PM (4).jpeg" alt="Project 12">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.39.37 PM (1).jpeg" alt="Project 13">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.39.37 PM.jpeg" alt="Project 14">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.39.38 PM (2).jpeg" alt="Project 15">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.33 PM (1).jpeg" alt="Project 16">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.33 PM (2).jpeg" alt="Project 17">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.33 PM (3).jpeg" alt="Project 18">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.33 PM.jpeg" alt="Project 19">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.34 PM (1).jpeg" alt="Project 20">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.34 PM (2).jpeg" alt="Project 21">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.34 PM (4).jpeg" alt="Project 22">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.34 PM (5).jpeg" alt="Project 23">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/WhatsApp Image 2025-12-27 at 8.45.34 PM.jpeg" alt="Project 24">
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="prevSlide()">❮</button>
+                <div class="carousel-info">
+                    <span id="current-slide">1</span> / <span id="total-slides">24</span>
+                </div>
+                <button class="carousel-btn" onclick="nextSlide()">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>About My Projects</h2>
+        <p>
+            This gallery showcases a diverse range of artistic projects created during my studies at Heartland Community College and through independent practice. Each piece represents my exploration of different mediums, techniques, and artistic styles.
+        </p>
+        <p>
+            From detailed sketching and realistic portraiture to abstract compositions and three-dimensional sculptures, these projects demonstrate my commitment to artistic growth and experimentation. I continue to develop my skills and explore new creative possibilities in every piece I create.
+        </p>
+    </section>
+
+</div>
+
+<button class="colorChanging" onclick="launchConfetti()">
+    Rainbow Art Studio
+</button>
+
+<script>
+let currentSlide = 1;
+const totalSlides = document.querySelectorAll('.carousel-slide').length;
+
+// Initialize
+document.getElementById('total-slides').textContent = totalSlides;
+
+function showSlide(n) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    
+    if (n > slides.length) {
+        currentSlide = 1;
+    }
+    if (n < 1) {
+        currentSlide = slides.length;
+    }
+    
+    slides.forEach(slide => {
+        slide.classList.remove('active');
+    });
+    
+    slides[currentSlide - 1].classList.add('active');
+    document.getElementById('current-slide').textContent = currentSlide;
+}
+
+function nextSlide() {
+    currentSlide++;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide--;
+    showSlide(currentSlide);
+}
+
+// Confetti functionality
+const canvas = document.getElementById("confettiCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+const colors = ["#ff5fc8", "#ffd6f6", "#ffeaa7", "#c7ecee", "#a29bfe"];
+let pieces = [];
+
+function launchConfetti() {
+    pieces = [];
+    for (let i = 0; i < 220; i++) {
+        pieces.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * -canvas.height,
+            size: Math.random() * 6 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            speedX: Math.random() * 2 - 1,
+            speedY: Math.random() * 3 + 1,
+            rotation: Math.random() * 360,
+            rotationSpeed: Math.random() * 4 - 2,
+            opacity: Math.random() * 0.6 + 0.4
+        });
+    }
+    animate();
+}
+
+function drawConfetti(p) {
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rotation * Math.PI / 180);
+    ctx.globalAlpha = p.opacity;
+    ctx.fillStyle = p.color;
+    ctx.beginPath();
+    ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach((p, i) => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        p.rotation += p.rotationSpeed;
+        drawConfetti(p);
+        if (p.y > canvas.height + 20) pieces.splice(i, 1);
+    });
+    if (pieces.length > 0) requestAnimationFrame(animate);
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+});
+</script>
+
+</body>
+</html>
