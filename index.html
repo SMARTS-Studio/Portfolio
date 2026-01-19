@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<title>Shreya Vinay Mokashi | Art Portfolio</title>
+
+<style>
+    :root {
+        --pink: #ff5fc8;
+        --bg1: #ffd6f6;
+        --bg2: #e0f7ff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(135deg, var(--bg1), var(--bg2));
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+    }
+
+    canvas {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 60px 20px 140px;
+        position: relative;
+        z-index: 1;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    header h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: clamp(48px, 8vw, 72px);
+        color: var(--pink);
+        margin-bottom: 10px;
+        line-height: 1.1;
+    }
+
+    header p {
+        font-size: clamp(14px, 3.5vw, 18px);
+        color: #555;
+    }
+
+    .contact {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: clamp(13px, 3.5vw, 16px);
+    }
+
+    .contact a {
+        color: var(--pink);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .contact a:hover {
+        text-decoration: underline;
+    }
+
+    section {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 22px;
+        padding: 28px;
+        margin-bottom: 28px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    section h2 {
+        color: var(--pink);
+        margin-bottom: 14px;
+        font-size: clamp(18px, 4vw, 24px);
+    }
+
+    section p,
+    li {
+        font-size: clamp(14px, 3.5vw, 16px);
+        line-height: 1.6;
+    }
+
+    ul {
+        padding-left: 20px;
+        margin: 0;
+    }
+
+    li {
+        margin-bottom: 8px;
+    }
+
+    /* Important Button */
+    .colorChanging {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background: linear-gradient(135deg, #ff5fc8, #ff9de2);
+        border: none;
+        border-radius: 50px;
+        padding: 22px 42px;
+        font-size: clamp(20px, 5vw, 32px);
+        color: white;
+        font-family: "Dancing Script", cursive;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 15px 30px rgba(255, 95, 200, 0.4);
+        transition: all 0.3s ease;
+        z-index: 2;
+        white-space: nowrap;
+    }
+
+    .colorChanging:hover {
+        transform: scale(1.08);
+        background: linear-gradient(135deg, #ffffff, #ffe6f6);
+        color: var(--pink);
+    }
+
+    .colorChanging:active {
+        transform: scale(0.95);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+        .container {
+            padding-top: 40px;
+        }
+
+        .colorChanging {
+            left: 50%;
+            right: auto;
+            bottom: 15px;
+            transform: translateX(-50%);
+            padding: 18px 34px;
+        }
+
+        .colorChanging:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<canvas id="confettiCanvas"></canvas>
+
+<div class="container">
+
+    <header>
+        <h1>Shreya Vinay Mokashi</h1>
+        <p>Studio Art Student • Aspiring Artist • Creative Designer</p>
+    </header>
+
+    <div class="contact">
+        <p>
+            📧 <a href="mailto:shreyam2662@gmail.com">shreyam2662@gmail.com</a><br>
+            📞 309-205-2555
+        </p>
+        <p>
+            <a href="#">Art Portfolio</a> • <a href="#">Instagram</a>
+        </p>
+    </div>
+
+    <section>
+        <h2>Summary</h2>
+        <p>
+            Currently studying Studio Art at Heartland Community College. I have experience
+            working with Adobe Creative Suite and various studio media. I am passionate about
+            becoming a professional artist specializing in sketching and painting.
+        </p>
+        <p>
+            Actively involved in community activities related to art and culture. Courses taken
+            include Drawing I, Two-Dimensional Design, Computer Imaging and Design.
+            Currently enrolled in a Web Page Development course.
+        </p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>Sketching and painting from live objects</li>
+            <li>Graphic design</li>
+            <li>Adobe Creative Suite</li>
+            <li>Team management</li>
+            <li>Illustration</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <ul>
+            <li>2024 – High School Diploma</li>
+            <li>In Progress – Heartland Community College, Associate in Fine Arts</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Awards & Achievements</h2>
+        <ul>
+            <li>2024 – 1st Place, 97th McLean County Arts Center Amateur Art Competition</li>
+            <li>2024 – 1st Place, Starved Rock State Park Art Show</li>
+            <li>2023 – 1st Place, 96th McLean County Arts Center Amateur Art Competition</li>
+            <li>2023 – 1st Place, Starved Rock State Park Art Show</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+        <ul>
+            <li>Sugar Creek Art Festival</li>
+            <li>STEAM Olympics Art Workshop</li>
+            <li>Teaching arts and crafts at the Hindu Temple</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Participation</h2>
+        <ul>
+            <li>Sewa International Food Service</li>
+            <li>Midwest Food Bank</li>
+        </ul>
+    </section>
+
+</div>
+
+<button class="colorChanging" onclick="launchConfetti()">
+    Rainbow Art Studio
+</button>
+
+<script>
+const canvas = document.getElementById("confettiCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+const colors = ["#ff5fc8", "#ffd6f6", "#ffeaa7", "#c7ecee", "#a29bfe"];
+let pieces = [];
+
+function launchConfetti() {
+    pieces = [];
+    for (let i = 0; i < 220; i++) {
+        pieces.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * -canvas.height,
+            size: Math.random() * 6 + 4,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            speedX: Math.random() * 2 - 1,
+            speedY: Math.random() * 3 + 1,
+            rotation: Math.random() * 360,
+            rotationSpeed: Math.random() * 4 - 2,
+            opacity: Math.random() * 0.6 + 0.4
+        });
+    }
+    animate();
+}
+
+function drawConfetti(p) {
+    ctx.save();
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rotation * Math.PI / 180);
+    ctx.globalAlpha = p.opacity;
+    ctx.fillStyle = p.color;
+    ctx.beginPath();
+    ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+}
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach((p, i) => {
+        p.y += p.speedY;
+        p.x += p.speedX;
+        p.rotation += p.rotationSpeed;
+        drawConfetti(p);
+        if (p.y > canvas.height + 20) pieces.splice(i, 1);
+    });
+    if (pieces.length > 0) requestAnimationFrame(animate);
+}
+</script>
+
+</body>
+</html>
